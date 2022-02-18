@@ -1,0 +1,39 @@
+timestamp 1645198197
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use INV_v1p1 INV_v1p1_a_2 1 0 454 0 1 178
+use INV_v1p1 INV_v1p1_a_1 1 0 -456 0 1 178
+use INV_v1p1 INV_v1p1_a_0 1 0 -1366 0 1 178
+port "VOUT" 3 2554 1042 2554 1042 m1
+port "VSS" 1 2292 52 2292 52 li
+port "VDD" 0 62 1202 62 1202 li
+node "m1_608_744#" 5 951.69 608 744 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12288 768 120576 3896 0 0 0 0 0 0 0 0
+node "VOUT" 11 1057.14 2554 1042 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 68376 4940 0 0 0 0 0 0 0 0 0 0
+node "VSS" 816 1017.8 2292 52 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77316 4616 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 954 1187.31 62 1202 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90372 5384 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "VOUT" "m1_608_744#" 39.633
+cap "INV_v1p1_a_1/VSS" "INV_v1p1_a_1/VIN" 2.04636e-12
+cap "INV_v1p1_a_1/VDD" "INV_v1p1_a_1/VOUT" 460.425
+cap "INV_v1p1_a_1/VIN" "INV_v1p1_a_1/VOUT" 148.871
+cap "INV_v1p1_a_1/VDD" "INV_v1p1_a_1/VIN" 502.713
+cap "INV_v1p1_a_1/VDD" "INV_v1p1_a_1/VSS" 5.68434e-14
+cap "INV_v1p1_a_2/VIN" "INV_v1p1_a_2/VOUT" 195.155
+cap "INV_v1p1_a_2/VIN" "INV_v1p1_a_2/VDD" 358.54
+cap "INV_v1p1_a_2/VOUT" "INV_v1p1_a_2/VDD" 406.92
+merge "INV_v1p1_a_2/VSS" "INV_v1p1_a_0/VSS" -685.734 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -46308 -2962 0 0 0 0 0 0 0 0 0 0 0 0
+merge "INV_v1p1_a_0/VSS" "INV_v1p1_a_1/VSS"
+merge "INV_v1p1_a_1/VSS" "VSUBS"
+merge "VSUBS" "VSS"
+merge "INV_v1p1_a_2/VOUT" "INV_v1p1_a_0/VOUT" -1366.08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -51708 -3900 0 0 0 0 0 0 0 0 0 0
+merge "INV_v1p1_a_0/VOUT" "INV_v1p1_a_1/VOUT"
+merge "INV_v1p1_a_1/VOUT" "VOUT"
+merge "INV_v1p1_a_2/VDD" "INV_v1p1_a_0/VDD" -1187.31 0 0 0 0 0 -2552 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -85476 -5232 0 0 0 0 0 0 0 0 0 0 0 0
+merge "INV_v1p1_a_0/VDD" "INV_v1p1_a_1/VDD"
+merge "INV_v1p1_a_1/VDD" "VDD"
+merge "INV_v1p1_a_2/VIN" "INV_v1p1_a_0/VIN" -850.681 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2668 -396 0 0 0 0 0 0 0 0 0 0
+merge "INV_v1p1_a_0/VIN" "INV_v1p1_a_1/VIN"
+merge "INV_v1p1_a_1/VIN" "m1_608_744#"

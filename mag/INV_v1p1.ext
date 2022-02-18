@@ -1,0 +1,27 @@
+timestamp 1641587603
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+port "VOUT" 2 1838 430 1838 430 m1
+port "VIN" 1 1674 432 1674 432 m1
+port "VDD" 3 2224 1024 2224 1024 li
+port "VSS" 4 1838 -122 1838 -122 li
+node "VOUT" 5553 276.824 1838 430 m1 0 0 0 0 0 0 0 0 24800 1048 51200 2112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 42432 2904 111362 5994 0 0 0 0 0 0 0 0 0 0
+node "VIN" 5004 554.852 1674 432 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 109464 6676 0 0 8976 800 31976 1644 0 0 0 0 0 0 0 0 0 0
+node "VDD" 15688 1680.5 2224 1024 li 0 0 0 0 580580 3096 0 0 90848 5344 39600 1596 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 126854 7462 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSS" 0 0 1838 -122 li 326120 2292 0 0 0 0 0 0 13200 532 63512 3736 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 75208 4424 0 0 0 0 0 0 0 0 0 0 0 0
+cap "VIN" "VOUT" 589.766
+cap "VIN" "VDD" 1394.02
+cap "VOUT" "VDD" 2452.89
+device msubckt sky130_fd_pr__nfet_01v8 1662 32 1663 33 l=30 w=200 "VSS" "VIN" 60 0 "VSS" 200 0 "VOUT" 200 0
+device msubckt sky130_fd_pr__nfet_01v8 1566 32 1567 33 l=30 w=200 "VSS" "VIN" 60 0 "VOUT" 200 0 "VSS" 200 0
+device msubckt sky130_fd_pr__pfet_01v8 2046 661 2047 662 l=30 w=200 "VDD" "VIN" 60 0 "VDD" 200 0 "VOUT" 200 0
+device msubckt sky130_fd_pr__pfet_01v8 1950 661 1951 662 l=30 w=200 "VDD" "VIN" 60 0 "VOUT" 200 0 "VDD" 200 0
+device msubckt sky130_fd_pr__pfet_01v8 1854 661 1855 662 l=30 w=200 "VDD" "VIN" 60 0 "VDD" 200 0 "VOUT" 200 0
+device msubckt sky130_fd_pr__pfet_01v8 1758 661 1759 662 l=30 w=200 "VDD" "VIN" 60 0 "VOUT" 200 0 "VDD" 200 0
+device msubckt sky130_fd_pr__pfet_01v8 1662 661 1663 662 l=30 w=200 "VDD" "VIN" 60 0 "VDD" 200 0 "VOUT" 200 0
+device msubckt sky130_fd_pr__pfet_01v8 1566 661 1567 662 l=30 w=200 "VDD" "VIN" 60 0 "VOUT" 200 0 "VDD" 200 0

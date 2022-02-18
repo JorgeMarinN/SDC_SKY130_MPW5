@@ -19,6 +19,10 @@ N 250 180 280 180 { lab=VSS}
 N 250 160 250 180 { lab=VSS}
 N 250 180 250 210 { lab=VSS}
 N 250 70 310 70 { lab=VOUT}
+C {devices/ipin.sym} 110 70 0 0 {name=p1 lab=VIN}
+C {devices/opin.sym} 310 70 0 0 {name=p5 lab=VOUT}
+C {devices/iopin.sym} 250 -60 3 0 {name=p2 lab=VDD}
+C {devices/iopin.sym} 250 210 1 0 {name=p4 lab=VSS}
 C {sky130_fd_pr/nfet_01v8.sym} 230 130 0 0 {name=M1
 L=0.15
 W=2
@@ -47,7 +51,3 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 110 70 0 0 {name=p1 lab=VIN}
-C {devices/iopin.sym} 250 -60 3 0 {name=p2 lab=VDD}
-C {devices/iopin.sym} 250 210 1 0 {name=p4 lab=VSS}
-C {devices/opin.sym} 310 70 0 0 {name=p5 lab=VOUT}
