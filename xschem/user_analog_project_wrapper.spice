@@ -70,9 +70,9 @@ R8 vssd1 io_oeb[12] sky130_fd_pr__res_generic_m3 W=0.56 L=0.49 m=1
 R9 vssd1 io_oeb[16] sky130_fd_pr__res_generic_m3 W=0.56 L=0.31 m=1
 R11 vssd1 io_oeb[11] sky130_fd_pr__res_generic_m3 W=0.56 L=0.58 m=1
 R12 vssd1 io_oeb[15] sky130_fd_pr__res_generic_m3 W=0.56 L=0.6 m=1
-X1 io_analog[1] io_analog[0] DOUT vccd1 vssa1 SDC_v2p1
-XBUFFINV1 DOUT net1 vccd1 vssa1 INV_v1p1
-XBUFFINV2 net1 io_analog[2] vccd1 vssa1 INV3X_v1p1
+X1 io_analog[1] io_analog[0] net1 vccd1 vssa1 SDC_v2p1
+XBUFFINV1 net1 net2 vccd1 vssa1 INV_v1p1
+XBUFFINV2 net2 io_analog[2] vccd1 vssa1 INV3X_v1p1
 **.ends
 
 * expanding   symbol:  SDC_v2p1.sym # of pins=5
