@@ -70,9 +70,7 @@ R8 vssd1 io_oeb[12] sky130_fd_pr__res_generic_m3 W=0.56 L=0.49 m=1
 R9 vssd1 io_oeb[16] sky130_fd_pr__res_generic_m3 W=0.56 L=0.31 m=1
 R11 vssd1 io_oeb[11] sky130_fd_pr__res_generic_m3 W=0.56 L=0.58 m=1
 R12 vssd1 io_oeb[15] sky130_fd_pr__res_generic_m3 W=0.56 L=0.6 m=1
-X1 io_analog[1] io_analog[0] net1 vccd1 vssa1 SDC_v2p1
-XBUFFINV1 net1 net2 vccd1 vssa1 INV_v1p1
-XBUFFINV2 net2 io_analog[2] vccd1 vssa1 INV3X_v1p1
+X1 io_analog[1] io_analog[0] io_analog[2] vccd1 vssa1 SDC_v2p1
 **.ends
 
 * expanding   symbol:  SDC_v2p1.sym # of pins=5
@@ -88,40 +86,6 @@ XOSC_SENS SENS_IN N1_S N2_S VDD VSS net1 OSC_v3p2
 XOSC_REF REF_IN N1_R N2_R VDD VSS REF_IN OSC_v3p2
 XDFF N2_S N2_R DOUT NDOUT VDD VSS DFF_v4p1
 XPG SENS_IN DOUT net1 VDD VSS PASSGATE_v1p2
-.ends
-
-
-* expanding   symbol:  INV_v1p1.sym # of pins=4
-** sym_path: /home/jmarin/Documents/SKY130/SDC_SKY130_MPW5/xschem/INV_v1p1.sym
-** sch_path: /home/jmarin/Documents/SKY130/SDC_SKY130_MPW5/xschem/INV_v1p1.sch
-.subckt INV_v1p1  VIN VOUT VDD VSS
-*.ipin VIN
-*.opin VOUT
-*.iopin VDD
-*.iopin VSS
-XM1 VOUT VIN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-XM2 VOUT VIN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=6 nf=6 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1 m=1
-.ends
-
-
-* expanding   symbol:  INV3X_v1p1.sym # of pins=4
-** sym_path: /home/jmarin/Documents/SKY130/SDC_SKY130_MPW5/xschem/INV3X_v1p1.sym
-** sch_path: /home/jmarin/Documents/SKY130/SDC_SKY130_MPW5/xschem/INV3X_v1p1.sch
-.subckt INV3X_v1p1  VIN VOUT VDD VSS
-*.ipin VIN
-*.iopin VDD
-*.iopin VSS
-*.opin VOUT
-XM1 VOUT VIN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=3 m=3
-XM2 VOUT VIN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=6 nf=6 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=3 m=3
 .ends
 
 
@@ -255,6 +219,23 @@ XM1 VOUT VIN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) *
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 XM2 VOUT VIN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  INV_v1p1.sym # of pins=4
+** sym_path: /home/jmarin/Documents/SKY130/SDC_SKY130_MPW5/xschem/INV_v1p1.sym
+** sch_path: /home/jmarin/Documents/SKY130/SDC_SKY130_MPW5/xschem/INV_v1p1.sch
+.subckt INV_v1p1  VIN VOUT VDD VSS
+*.ipin VIN
+*.opin VOUT
+*.iopin VDD
+*.iopin VSS
+XM1 VOUT VIN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 VOUT VIN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=6 nf=6 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 .ends

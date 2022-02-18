@@ -49,17 +49,9 @@ N 4040 -430 4110 -430 { lab=vccd1}
 N 4040 -120 4040 -70 { lab=vssa1}
 N 3950 -70 4040 -70 { lab=vssa1}
 N 4180 -240 4340 -240 { lab=#net1}
-N 4520 -350 4520 -240 { lab=io_analog[2]}
+N 4340 -350 4340 -240 { lab=io_analog[2]}
 N 3780 -260 3880 -260 { lab=io_analog[1]}
 N 3780 -140 3880 -140 { lab=io_analog[0]}
-N 4420 -240 4430 -240 { lab=#net2}
-N 4510 -240 4520 -240 { lab=io_analog[2]}
-N 4340 -300 4465 -300 { lab=vccd1}
-N 4465 -300 4465 -270 { lab=vccd1}
-N 4375 -300 4375 -270 { lab=vccd1}
-N 4340 -180 4465 -180 { lab=vssa1}
-N 4465 -210 4465 -180 { lab=vssa1}
-N 4375 -210 4375 -180 { lab=vssa1}
 C {devices/iopin.sym} 3240 -470 0 0 {name=p1 lab=vdda1}
 C {devices/iopin.sym} 3240 -440 0 0 {name=p2 lab=vdda2}
 C {devices/iopin.sym} 3240 -410 0 0 {name=p3 lab=vssa1}
@@ -164,11 +156,7 @@ C {devices/lab_pin.sym} 4130 820 0 0 {name=l31 sig_type=std_logic lab=vssd1}
 C {devices/lab_pin.sym} 4130 940 0 0 {name=l32 sig_type=std_logic lab=vssd1}
 C {devices/lab_pin.sym} 4110 -430 0 1 {name=l33 sig_type=std_logic lab=vccd1}
 C {devices/lab_pin.sym} 3950 -70 0 0 {name=l34 sig_type=std_logic lab=vssa1}
-C {devices/lab_pin.sym} 4520 -350 0 0 {name=l35 sig_type=std_logic lab=io_analog[2]}
+C {devices/lab_pin.sym} 4340 -350 0 0 {name=l35 sig_type=std_logic lab=io_analog[2]}
 C {devices/lab_pin.sym} 3780 -260 0 0 {name=l1 sig_type=std_logic lab=io_analog[1]}
 C {devices/lab_pin.sym} 3780 -140 0 0 {name=l2 sig_type=std_logic lab=io_analog[0]}
 C {SDC_v2p1.sym} 3820 -280 0 0 {name=X1}
-C {INV_v1p1.sym} 4300 -240 0 0 {name=XBUFFINV1}
-C {INV3X_v1p1.sym} 4390 -240 0 0 {name=XBUFFINV2}
-C {devices/lab_pin.sym} 4340 -300 2 1 {name=l3 sig_type=std_logic lab=vccd1}
-C {devices/lab_pin.sym} 4340 -180 0 0 {name=l4 sig_type=std_logic lab=vssa1}
